@@ -1,2 +1,3 @@
 rootProject.name = "dev-library-android"
 include ':app'
+include ':tabs'

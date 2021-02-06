@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hard.R;
+import com.hard.application.R;
 
 public class Fragment1 extends Fragment {
     private static final String TITLE = "title";

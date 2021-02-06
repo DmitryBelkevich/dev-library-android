@@ -11,7 +11,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
-import com.hard.R;
 import com.hard.application.fragments.Fragment1;
 import com.hard.application.fragments.Fragment2;
 import com.hard.application.fragments.Fragment3;

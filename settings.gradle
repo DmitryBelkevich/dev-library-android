@@ -1,5 +1,5 @@
 rootProject.name = "dev-library-android"
 include ':app'
-include ':tabs'
-include ':swipeRefreshLayout'
-include ':listView'
+include ':tasks:tabs'
+include ':tasks:swipeRefreshLayout'
+include ':tasks:listView'

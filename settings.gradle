@@ -1,5 +1,8 @@
 rootProject.name = "dev-library-android"
+
 include ':app'
+
 include ':tasks:tabs'
 include ':tasks:swipeRefreshLayout'
 include ':tasks:listView'
+include ':tasks:day-night-mode'

@@ -1,6 +1,7 @@
 package com.hard.application;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -39,11 +40,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, ModelActivity.class);
+
                 Model model = (Model) parent.getAdapter().getItem(position);
 
-                String text = model.getId() + " " + model.getTitle();
-                System.out.println(text);
-                Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putLong("id", model.getId());
+                bundle.putString("title", model.getTitle());
+                intent.putExtras(bundle);
+
+                startActivity(intent);
             }
         });
 

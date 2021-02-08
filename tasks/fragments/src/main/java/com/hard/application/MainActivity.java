@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         Fragment2 fragment2 = Fragment2.newInstance("", "");
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.container, fragment1, null)
-                .add(R.id.container, fragment2, null)
+                .add(R.id.container_layout, fragment1, null)
+                .add(R.id.container_layout, fragment2, null)
                 .commit();
     }
 }

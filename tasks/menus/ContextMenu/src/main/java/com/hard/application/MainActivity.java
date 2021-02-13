@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        View view = findViewById(R.id.textView);
+        View view = findViewById(R.id.view);
 
         // long click
         registerForContextMenu(view);

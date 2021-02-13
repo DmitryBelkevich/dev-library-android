@@ -48,6 +48,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+                popupMenu.setOnDismissListener(new PopupMenu.OnDismissListener() {
+                    @Override
+                    public void onDismiss(PopupMenu menu) {
+
+                    }
+                });
+
                 popupMenu.show();
             }
         });

@@ -17,8 +17,17 @@ public class MainActivity extends AppCompatActivity {
 
         View view = findViewById(R.id.textView);
 
+        // long click
         registerForContextMenu(view);
 //        view.setOnCreateContextMenuListener(this);    // or
+
+        // short click
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openContextMenu(v);
+            }
+        });
     }
 
     @Override

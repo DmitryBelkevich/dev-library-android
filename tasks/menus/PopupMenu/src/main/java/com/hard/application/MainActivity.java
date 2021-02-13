@@ -8,6 +8,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -16,35 +17,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         View view = findViewById(R.id.view);
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this, view);
 
-        // xml
-        MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
+                // xml
+                popupMenu.inflate(R.menu.menu);
 
-        // programmatically
-        menu.add(1, R.id.item_2, 1, "item 2");
+                // programmatically
+                Menu menu = popupMenu.getMenu();
+                menu.add(1, R.id.item_2, 1, "item 2");
 
-        return true;
-    }
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        int id = item.getItemId();
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+                        switch (id) {
+                            case R.id.item_1:
+                                // TODO
+                                return true;
+                            case R.id.item_2:
+                                // TODO
+                                return true;
+                        }
 
-        switch (id) {
-            case R.id.item_1:
-                // TODO
-                return true;
-            case R.id.item_2:
-                // TODO
-                return true;
-        }
+                        return false;
+                    }
+                });
 
-        return super.onOptionsItemSelected(item);
+                popupMenu.show();
+            }
+        });
     }
 }

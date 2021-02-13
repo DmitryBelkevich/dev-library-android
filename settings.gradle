@@ -8,5 +8,5 @@ include ':tasks:swipeRefreshLayout'
 include ':tasks:listView'
 include ':tasks:day-night-mode'
 
-include ':tasks:menu:OptionsMenu'
-include ':tasks:menu:ContextMenu'
+include ':tasks:menus:OptionsMenu'
+include ':tasks:menus:ContextMenu'

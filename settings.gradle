@@ -10,3 +10,4 @@ include ':tasks:day-night-mode'
 
 include ':tasks:menus:OptionsMenu'
 include ':tasks:menus:ContextMenu'
+include ':tasks:menus:PopupMenu'

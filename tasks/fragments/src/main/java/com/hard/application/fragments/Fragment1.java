@@ -24,12 +24,12 @@ public class Fragment1 extends Fragment {
     public static Fragment1 newInstance(String param1, String param2) {
         Fragment1 fragment = new Fragment1();
 
-        Bundle args = new Bundle();
+        Bundle bundle = new Bundle();
 
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        bundle.putString(ARG_PARAM1, param1);
+        bundle.putString(ARG_PARAM2, param2);
 
-        fragment.setArguments(args);
+        fragment.setArguments(bundle);
 
         return fragment;
     }

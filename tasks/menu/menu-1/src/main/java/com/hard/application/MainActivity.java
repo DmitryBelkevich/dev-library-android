@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
 
-        menu.add(1, 2, 1, "item 2");
+        menu.add(1, R.id.item_2, 1, "item 2");
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_1:
                 // TODO
                 return true;
-            case 2:
+            case R.id.item_2:
                 // TODO
                 return true;
         }

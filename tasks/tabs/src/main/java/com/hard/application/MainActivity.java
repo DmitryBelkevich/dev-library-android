@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             Fragment fragment = fragments.get(position);
-            Bundle args = fragment.getArguments();
-            String title = args.getString(TITLE);
+            Bundle bundle = fragment.getArguments();
+            String title = bundle.getString(TITLE);
             return title;
         }
     }

@@ -1,9 +1,10 @@
 package com.hard.application;
 
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.ContextMenu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,11 +14,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        View view = findViewById(R.id.textView);
+
+        registerForContextMenu(view);
+//        view.setOnCreateContextMenuListener(this);    // or
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
+    public void onCreateContextMenu(ContextMenu menu, View view, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, view, menuInfo);
 
         // xml
         MenuInflater menuInflater = getMenuInflater();
@@ -25,12 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         // programmatically
         menu.add(1, R.id.item_2, 1, "item 2");
-
-        return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onContextItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         switch (id) {
@@ -42,6 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
         }
 
-        return super.onOptionsItemSelected(item);
+        return super.onContextItemSelected(item);
     }
 }

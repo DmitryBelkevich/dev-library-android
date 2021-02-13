@@ -17,12 +17,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+
+        // xml
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
 
+        // programmatically
         menu.add(1, R.id.item_2, 1, "item 2");
 
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override

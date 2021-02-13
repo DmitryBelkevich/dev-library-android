@@ -22,11 +22,11 @@ public class Fragment2 extends Fragment {
     public static Fragment2 newInstance(String title) {
         Fragment2 fragment = new Fragment2();
 
-        Bundle args = new Bundle();
+        Bundle bundle = new Bundle();
 
-        args.putString(TITLE, title);
+        bundle.putString(TITLE, title);
 
-        fragment.setArguments(args);
+        fragment.setArguments(bundle);
 
         return fragment;
     }

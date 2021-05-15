@@ -2,7 +2,6 @@ package com.hard.application;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -53,15 +51,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ArrayAdapter<Model> arrayAdapter = new PlaylistAdapter(this, R.layout.list_item, (List<Model>) models);
+        ArrayAdapter<Model> arrayAdapter = new MyAdapter(this, R.layout.list_item, (List<Model>) models);
         listView.setAdapter(arrayAdapter);
     }
 
-    private class PlaylistAdapter extends ArrayAdapter<Model> {
+    private class MyAdapter extends ArrayAdapter<Model> {
         private Context context;
         private int resource;
 
-        public PlaylistAdapter(@NonNull Context context, int resource, @NonNull List<Model> objects) {
+        public MyAdapter(@NonNull Context context, int resource, @NonNull List<Model> objects) {
             super(context, resource, objects);
 
             this.context = context;
